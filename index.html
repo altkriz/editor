@@ -11,9 +11,9 @@
 	<!-- Loading css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/codemirror.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/material-ocean.css"></link>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/show-hint.css">
     <link rel="stylesheet" href="css/main.css"> <!-- Main css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-+3zvJzQ+Jv+JzJZv6zvJfZzvzq2ZvZvzvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Loading js -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -30,12 +30,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/xml-hint.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/css-hint.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/keymap/sublime.js"></script>
+    
     <script src="js/main.js"></script> <!-- Main js -->
 
 </head>
 <body>
 <!-- FAB button -->
-<span id="info" onclick="togglePopup()"><i class="fa fa-info top-float" aria-hidden="true"></i></span>
+<span id="info" class="fa-stack fa-2x" onclick="togglePopup()">
+    <i class="fa fa-circle fa-stack-2x"></i>
+    <i class="fa fa-info fa-stack-1x fa-inverse" aria-hidden="true"></i>
+</span>
 
 <div id="popup" class="popup-content">
     <span class="popup-close" onclick="closePopup()">&times;</span>

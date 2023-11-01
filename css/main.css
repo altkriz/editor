@@ -25,18 +25,19 @@
         height: 100%;
         width: 50%;
 }
-#info{
+#info {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: green;
-    border-radius: 50%;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0078d4;
     color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     text-align: center;
-    padding: auto;
-    box-shadow: 2px 2px 3px #999;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 .popup-content {
     display: none;
