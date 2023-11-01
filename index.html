@@ -63,6 +63,22 @@
 
 <!-- Iframe output -->
 <div id="output"><iframe id="result"></iframe></div>
+<script>
+    function togglePopup() {
+    var popup = document.getElementById("popup");
+    if (popup.style.display === "block") {
+        popup.style.display = "none";
+    } else {
+        popup.style.display = "block";
+    }
+}
+
+// JavaScript for hiding the popup
+function closePopup() {
+    var popup = document.getElementById("popup");
+    popup.style.display = "none";
+}
+</script>
 </div>
 </body>
 </html>
