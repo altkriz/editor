@@ -4,14 +4,6 @@ $(document).ready(function(){
     var myTimeoutId = null;
 
 
-    $('#info').onclick = function() {
-        $('#console').style.display = "block";
-        console.log("hello");
-    }
-    $('#close').onclick = function() {
-        $('#console').style.display = "none";
-    }
-
     var config = {
         mode: "text/html",
         extraKeys: {"Ctrl-Space": "autocomplete"},
