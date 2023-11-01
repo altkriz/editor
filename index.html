@@ -35,7 +35,12 @@
 </head>
 <body>
 <!-- FAB button -->
-<span id="info"><i class="fa fa-info top-float" aria-hidden="true"></i></span>
+<span id="info" onclick="togglePopup()"><i class="fa fa-info top-float" aria-hidden="true"></i></span>
+
+<div id="popup" class="popup-content">
+    <span class="popup-close" onclick="closePopup()">&times;</span>
+    <p>Here you can put some information<br> about your website or any info <br>about the creator of the website</p>
+</div>
 
 <!-- Main area -->
 <div id="main">
