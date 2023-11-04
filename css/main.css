@@ -25,41 +25,54 @@
         height: 100%;
         width: 50%;
 }
-#info{
+
+#info-button {
     position: fixed;
-    width: 60px;
-    height: 60px;
-    bottom: 40px;
-    right: 40px;
-    background-color: green;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
-    color: white;
-    text-align: center;
-    padding: auto;
-    box-shadow: 2px 2px 3px #999;
-}
-.popup-content {
-    display: none;
-    position: fixed;
-    bottom: 70px;
-    right: 30px;
-    background-color: #333;
-    color: white;
-    border-radius: 5px;
-    padding: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.popup-close {
-    color: #ccc;
-    float: right;
-    font-size: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.popup-close:hover {
+    background-color: #007BFF;
     color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#info-button:hover {
+    background-color: #0056b3;
+}
+
+#popup {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 300px;
+    display: none;
+}
+
+#popup-content {
+    text-align: center;
+}
+
+#close-button {
+    background-color: #FF5252;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#close-button:hover {
+    background-color: #E63C3C;
 }
 
 .top-float{
@@ -67,12 +80,7 @@
     margin-top:18px;
 }
 @media screen and (max-width: 800px) {
-    #info{
-        right: 20px;
-        bottom: 20px;
-        width: 50px;
-        height: 50px;
-    }
+    
     .top-float{
         font-size: 1.2em;
         margin-top: 15px;

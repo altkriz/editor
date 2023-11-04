@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/theme/material-ocean.css"></link>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.52.2/addon/hint/show-hint.css">
     <link rel="stylesheet" href="css/main.css"> <!-- Main css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-+3zvJzQ+Jv+JzJZv6zvJfZzvzq2ZvZvzvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZvZw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 
     <!-- Loading js -->
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -36,14 +36,15 @@
 </head>
 <body>
 <!-- FAB button -->
-<span id="info" class="fa-stack fa-2x" onclick="togglePopup()">
-    <i class="fa fa-circle fa-stack-2x"></i>
-    <i class="fa fa-info fa-stack-1x fa-inverse" aria-hidden="true"></i>
-</span>
-
-<div id="popup" class="popup-content">
-    <span class="popup-close" onclick="closePopup()">&times;</span>
-    <p>Here you can put some information<br> about your website or any info <br>about the creator of the website</p>
+<button id="info-button">
+    <!-- Use the Font Awesome icon class for the info icon -->
+    <i class="fas fa-info"></i>
+</button>
+<div id="popup" class="hidden">
+    <div id="popup-content">
+        <span>Here you can some information about your editor like author and give info about your github and other social media  .</span>
+        <button id="close-button">Close</button>
+    </div>
 </div>
 
 <!-- Main area -->
@@ -64,21 +65,19 @@
 <!-- Iframe output -->
 <div id="output"><iframe id="result"></iframe></div>
 <script>
-    function togglePopup() {
-    var popup = document.getElementById("popup");
-    if (popup.style.display === "block") {
-        popup.style.display = "none";
-    } else {
-        popup.style.display = "block";
-    }
-}
+    const infoButton = document.getElementById("info-button");
+    const popup = document.getElementById("popup");
+    const closeButton = document.getElementById("close-button");
 
-// JavaScript for hiding the popup
-function closePopup() {
-    var popup = document.getElementById("popup");
-    popup.style.display = "none";
-}
+    infoButton.addEventListener("click", () => {
+        popup.style.display = "block";
+    });
+
+    closeButton.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
 </script>
+
 </div>
 </body>
 </html>
